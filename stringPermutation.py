@@ -4,6 +4,9 @@ Developed by Kedar Pandhare
 """
 
 def isPermutation(s1,s2):
+    if len(s1) != len(s2):
+        return False
+    
     s2 = " ".join(sorted(s2))
     s1 = " ".join(sorted(s1))
     """ this will sort the chars in the string and append it to a new string"""
@@ -20,6 +23,10 @@ Alternate approach of using Dictionary to store the keys and then compare with o
 def test(s1,s2):
     character = {}
     count = 1
+
+    if len(s1) != len(s2):
+        return False
+
     for i in s1:
         if i not in character:
             character[i] = count
