@@ -6,7 +6,7 @@ Developed by Kedar Pandhare
 def isPermutation(s1,s2):
     if len(s1) != len(s2):
         return False
-    
+
     s2 = " ".join(sorted(s2))
     s1 = " ".join(sorted(s1))
     """ this will sort the chars in the string and append it to a new string"""
