@@ -1,5 +1,6 @@
 """
 check if 2 strings are permutations of each other
+
 Developed by Kedar Pandhare
 """
 
@@ -45,7 +46,7 @@ def test(s1,s2):
         return False
 
 
-check_permutation = isPermutation("dcbba","abbcd")
+check_permutation = isPermutation("dcbba","DCBBA")
 check_permutation_1 = test("dcbba","abbcd")
 
 """

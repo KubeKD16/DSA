@@ -1,5 +1,9 @@
-## check if all chars in string are unique
+"""
+check if all chars in string are unique
 
+Developed by Kedar Pandhare
+"""
+import profile
 
 def isUnique(S):
     isunique = True
@@ -27,5 +31,5 @@ def printFunction(isunique,s):
         print("{} is not unique".format(s))
         return False
 
-s = ["abc","kedar","aabbccddee","pooja","testing"]
-isUnique(s)
+s = ["abc","KKEDAR","aabbccddee","pooja","testing"]
+profile.run('isUnique(s)')
