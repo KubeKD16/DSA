@@ -6,29 +6,29 @@ def convert_to_word(nums):
     tens = 'Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split()
     # print(tens)
 
-    def to_word(nums):
-        if nums < 20:
-            return units[nums-1:nums]
+    def to_word(n):
+        if n < 20:
+            return units[n-1:n]
         
-        if nums < 100:
-            return [tens[nums//10 - 2]] + to_word(nums % 10)
+        if n < 100:
+            return [tens[n//10-2]] + to_word(n % 10)
         
-        if nums < 1000 :
-            return [units[nums//100 - 1]] + ['Hundred'] + to_word(nums % 100)
+        if n < 1000 :
+            return [units[n//100-1]] + ['Hundred'] + to_word(n % 100)
 
 
         for i,j in enumerate(('Thousand','Million','Billion'),1):
-            if nums < 1000 ** (i+1):
-                return to_word(nums//(1000 ** i)) + [j] + to_word(nums % 1000 ** i)
+            if n < 1000 ** (i+1):
+                return to_word(n//(1000 ** i)) + [j] + to_word(n % 1000 ** i)
     
-    return ' '.join(to_word(nums))
+    return ' '.join(to_word(nums)) or 'Zero'
 
 
 
 
 
 
-numbers = [10,99,89,850,123, 999, 150897, 90087645]
+numbers = [10,99,89,850,123,999,150897,987645,98765334,1098762345]
 for i in numbers:
     value = convert_to_word(i)
     print("The word value of {} is {}".format(i,value))
