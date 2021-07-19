@@ -10,11 +10,11 @@ def convert_to_word(nums):
         if n < 20:
             return units[n-1:n]
         
-        if n < 100:
-            return [tens[n//10-2]] + to_word(n % 10)
+        if n < 100: 
+            return [tens[n//10 - 2]] + to_word(n % 10)
         
         if n < 1000 :
-            return [units[n//100-1]] + ['Hundred'] + to_word(n % 100)
+            return [units[n//100 - 1]] + ['Hundred'] + to_word(n % 100)
 
 
         for i,j in enumerate(('Thousand','Million','Billion'),1):
