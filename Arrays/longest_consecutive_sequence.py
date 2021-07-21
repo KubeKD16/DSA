@@ -1,6 +1,7 @@
 class Test:
     def longest_consecutive_sequence(self,s):
         best = 0
+        s = set(s)
 
         for x in s:
             if x-1 not in s:
