@@ -1,0 +1,49 @@
+################################################################################################################################
+To find an intersection of 2 linked lists -->
+
+given A and B as 2 LL - we can find the intersection of them by maintaining 2 pointers pA and pB such that
+pA advances itself as long as it doesn't become None & pB advances itself as long as it doesn't become None. 
+
+if pA and pB both become None -- we just point pA to point to head of list 2 and pB to point to head of list 1
+
+sample code looks like below -
+
+headA - head of List 1 
+head B - head of List 2
+
+if both headA and headB are none - then we return None
+
+pA = headA
+pB = headB
+
+while pA != pB:
+  pA = headB if pA is None else pA.next ( traverse the list1 as long as I don't become None, if I become None - then point to the head of L2{headB})
+  pB = headA if pB is None else pB.next (traverse the list1 as long as I don't become None, if I become None - then point to the head of L1{headA}))
+
+return pA
+
+################################################################################################################################
+
+
+
+################################################################################################################################
+To find if a LL contains a cycle -->
+
+Maintain 2 pointers (turtle and Hare) (rabbit and tortoise analogy) & as long as Hare is not None , move turtle one pointer(head.next) ahead
+and hare two pointer ahead (head.next.next). Eventuall, hare will meet turtle and when it does, we just need to return True else False 
+
+sample Code looks like below - -
+
+Head1 = head of List1 & Head2 = head of List2
+
+turle , hare = head, head 
+
+while hare != None and hare.next != None:
+    turle = turle.next 
+    hare = hare.next 
+
+    if hare == turtle:
+        return True (found a cycle)
+        OR you can return turtle as the intersection point of the LL 
+
+################################################################################################################################

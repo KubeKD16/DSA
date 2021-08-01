@@ -75,6 +75,13 @@ class SLL:
                 current = current.get_next()
         
         return False
+    
+    def print_list(self):
+        current = self.head 
+        while current is not None:
+            print("{} -> ".format(current))
+            current = current.get_next()
+        
 
     def remove(self,data):
         """ Removes the current data node from the Linkedlist that matches the arguement self.head.get_data
