@@ -87,27 +87,6 @@ class SLL:
         """ Removes the current data node from the Linkedlist that matches the arguement self.head.get_data
         Take O(n) time complexity as in the worst scenario, we will need to traverse the entire SLL to find the data node
         and remove it."""
-        # if self.head == None:
-        #     return "LL is empty"
-        
-        # current = self.head 
-        # previous = None
-        # found = False 
-
-        # while not found:
-        #     if current.get_data() == data:
-        #         found=True
-        #     else:
-        #         if current.get_next() is not None:
-        #             previous = current
-        #             current = current.get_next()
-        #         else:
-        #             return "Node doesn't exist"
-        
-        # if previous is None:
-        #     self.head = current.get_next()
-        # else:
-        #     previous.set_next(current.get_next())
 
         if self.head is None:
             return "LL is empty"
